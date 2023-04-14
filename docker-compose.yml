@@ -1,0 +1,27 @@
+version: "3.3"
+
+services:
+
+  postgresql:
+    restart: always
+    image: postgres
+    container_name: orders-postgres-local
+    hostname: orders-postgres-local
+    volumes:
+      - pg_vol:/var/lib/postgres/data
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=rt53jn
+      - POSTGRES_DB=orders
+    ports:
+      - 5432:5432
+    networks:
+      - orders-network
+
+networks:
+  orders-network:
+    driver: bridge
+
+volumes:
+  pg_vol:
+    driver: local
