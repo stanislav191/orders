@@ -14,3 +14,7 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
     show-sql: false
+  flyway:
+    location: classpath:db/migration
+    username: admin
+    password: rt53jn
