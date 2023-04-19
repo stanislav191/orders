@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserController {
 
-    @GetMapping
+    @GetMapping("/api/user")
     public String randomUserName() {
         return "I'm random user!)";
     }
