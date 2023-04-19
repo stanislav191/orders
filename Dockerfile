@@ -8,4 +8,4 @@ EXPOSE 8081
 
 CMD ["./target/release/app"]
 
-ENTRYPOINT ["java","-jar","/app.jar"]
+ENTRYPOINT ["java","-jar","/orders-0.0.1-SNAPSHOT.jar"]
