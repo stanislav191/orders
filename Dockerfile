@@ -6,4 +6,6 @@ COPY . /app
 
 EXPOSE 8081
 
+CMD ["./target/release/app"]
+
 ENTRYPOINT ["java","-jar","/app.jar"]
